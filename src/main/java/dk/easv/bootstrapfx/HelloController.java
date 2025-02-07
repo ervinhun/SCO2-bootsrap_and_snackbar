@@ -9,6 +9,7 @@ import javafx.scene.layout.HBox;
 import org.kordamp.bootstrapfx.BootstrapFX;
 
 import java.io.IOException;
+import java.util.Random;
 
 public class HelloController {
     @FXML private HBox hboxSnackbarP;
@@ -28,8 +29,10 @@ public class HelloController {
         double windowWidth = hboxSnackbarP.getScene().getWidth();
         hboxSnackbarP.getChildren().clear();
         hboxSnackbarP.getChildren().add(snackBar);
+        Random r = new Random();
+        int cat = r.nextInt(5);
         //SnackbarController snackbarController = new SnackbarController();
         String txt = "This is a text";
-        controller.setSnackBar(txt, null, 5, hboxSnackbarP, windowWidth, controller.getWARNING(), controller);
+        controller.setSnackBar(txt, null, 5, hboxSnackbarP, windowWidth, cat, controller);
     }
 }

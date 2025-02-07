@@ -112,6 +112,8 @@ public class SnackbarController {
             case DANGER:
                 hboxSnack.getStyleClass().add("alert-danger");
                 break;
+            default:
+                hboxSnack.getStyleClass().setAll("alert");
         }
     }
 
